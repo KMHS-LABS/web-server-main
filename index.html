@@ -42,7 +42,11 @@
           />
           <span class="font-bold text-xl text-gray-800">근명고등학교 LABS</span>
         </div>
-        <nav id="main-navigation" class="main-nav hidden md:flex space-x-4" aria-label="주 메뉴">
+        <nav
+          id="main-navigation"
+          class="main-nav hidden md:flex space-x-4"
+          aria-label="주 메뉴"
+        >
           <a href="#about" class="text-gray-600 hover:text-teal-500">소개</a>
           <a href="#services" class="text-gray-600 hover:text-teal-500"
             >서비스</a
@@ -62,7 +66,10 @@
       </div>
     </header>
 
-    <section class="relative text-white fade-in hero" aria-labelledby="hero-title">
+    <section
+      class="relative text-white fade-in hero"
+      aria-labelledby="hero-title"
+    >
       <div class="absolute inset-0 bg-teal-600" aria-hidden="true"></div>
       <div class="container mx-auto px-4 py-20 lg:py-32 relative z-10">
         <div class="grid lg:grid-cols-2 gap-12 items-center">
@@ -228,21 +235,26 @@
         </h2>
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div class="bg-gray-50 p-6 rounded-lg">
-            <h3 class="text-xl font-bold mb-4">서버 하드웨어</h3>
+            <h3 class="text-xl font-bold mb-4">서버1 하드웨어</h3>
             <ul class="space-y-2 text-gray-600">
-              <li>CPU: AMD Ryzen 7 (8C/16T)</li>
-              <li>RAM: 32GB DDR4</li>
-              <li>Storage: NVMe 1TB + HDD 4TB (RAID1)</li>
-              <li>NIC: 2.5GbE</li>
+              <li>OS: Proxmox VE 9.0.9</li>
+              <li>CPU: Intel® Core™ i7-13700 Processor (16C/24T)</li>
+              <li>RAM: 32GB DDR5</li>
+              <li>Storage: NVMe 500GB + HDD 1TB</li>
+              <!-- (RAID1) -->
+              <li>NIC: 1GbE</li>
             </ul>
           </div>
           <div class="bg-gray-50 p-6 rounded-lg">
-            <h3 class="text-xl font-bold mb-4">소프트웨어 스택</h3>
+            <h3 class="text-xl font-bold mb-4">서버2 하드웨어</h3>
             <ul class="space-y-2 text-gray-600">
-              <li>OS: Ubuntu Server 22.04 LTS</li>
-              <li>Container: Docker / Compose</li>
-              <li>DB: PostgreSQL / MariaDB</li>
-              <li>Reverse Proxy: Nginx</li>
+              <li>HOST: PowerEdge T150</li>
+              <li>OS: Proxmox VE 9.0.9</li>
+              <li>CPU: Intel® Xeon® E-2314 Processor (4C/4T)</li>
+              <li>RAM: 32GB DDR4 ECC</li>
+              <li>Storage: NVMe 500GB + HDD 1TB * 2</li>
+              <!-- (RAID0) -->
+              <li>NIC: 1GbE * 2</li>
             </ul>
           </div>
           <div class="bg-gray-50 p-6 rounded-lg">
@@ -291,7 +303,7 @@
               >itclub@example.com</a
             >
           </p>
-          <p class="mb-4"><strong>위치:</strong> 본관 3층 프로젝트실</p>
+          <p class="mb-4"><strong>위치:</strong> 별관 3층 ...실</p>
           <p class="text-sm text-gray-500">
             불필요한 개인정보는 제출하지 마세요.
           </p>
@@ -308,12 +320,9 @@
     <footer class="bg-gray-800 text-white py-8">
       <div class="container mx-auto px-4 text-center">
         <p>
-          &copy; <span id="year"></span> 근명고등학교. 학생 교육 목적 내부
-          인프라 소개 페이지.
+          &copy; <span id="year"></span> 근명고등학교 LABS. All rights reserved.
         </p>
-        <p class="text-sm text-gray-400 mt-2">
-          본 페이지는 예시이며 일부 데이터는 샘플입니다.
-        </p>
+        <p>&copy; <span id="year"></span> 신윤재. All rights reserved.</p>
       </div>
     </footer>
 
