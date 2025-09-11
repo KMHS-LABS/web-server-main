@@ -4,7 +4,7 @@
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
   const menuToggle = document.querySelector(".menu-toggle");
-  const nav = document.querySelector(".main-nav");
+  const nav = document.querySelector("#main-navigation.main-nav");
 
   if (menuToggle && nav) {
     menuToggle.addEventListener("click", () => {
@@ -50,23 +50,29 @@
   }
 
   // 섹션 fade-in 관찰자
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.12 }
-  );
+  const prefersReduced = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+
+  const observer = !prefersReduced
+    ? new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.12 }
+      )
+    : null;
 
   // hero 섹션 즉시 표시하고 나머지 섹션은 관찰
   document.querySelectorAll(".fade-in").forEach((el) => {
-    if (el.classList.contains("hero")) {
+    if (el.classList.contains("hero") || prefersReduced) {
       el.classList.add("visible");
-    } else {
+    } else if (observer) {
       observer.observe(el);
     }
   });
@@ -88,11 +94,4 @@
     window.addEventListener("keydown", handleFirstTab);
   }
   window.addEventListener("keydown", handleFirstTab);
-
-  // 스킵 링크 동적 추가 (접근성)
-  const skip = document.createElement("a");
-  skip.href = "#hero-title";
-  skip.textContent = "본문 바로가기";
-  skip.className = "skip-link";
-  document.body.prepend(skip);
 })();

@@ -36,11 +36,13 @@
             src="/logo.png"
             alt="근명고등학교 로고"
             class="h-10 w-10 mr-3"
+            width="40"
+            height="40"
             decoding="async"
           />
           <span class="font-bold text-xl text-gray-800">근명고등학교 LABS</span>
         </div>
-        <nav class="hidden md:flex space-x-4" aria-label="주 메뉴">
+        <nav id="main-navigation" class="main-nav hidden md:flex space-x-4" aria-label="주 메뉴">
           <a href="#about" class="text-gray-600 hover:text-teal-500">소개</a>
           <a href="#services" class="text-gray-600 hover:text-teal-500"
             >서비스</a
@@ -52,6 +54,7 @@
         <button
           class="md:hidden menu-toggle"
           aria-expanded="false"
+          aria-controls="main-navigation"
           aria-label="메뉴 열기"
         >
           ☰
@@ -59,7 +62,7 @@
       </div>
     </header>
 
-    <section class="relative text-white fade-in" aria-labelledby="hero-title">
+    <section class="relative text-white fade-in hero" aria-labelledby="hero-title">
       <div class="absolute inset-0 bg-teal-600" aria-hidden="true"></div>
       <div class="container mx-auto px-4 py-20 lg:py-32 relative z-10">
         <div class="grid lg:grid-cols-2 gap-12 items-center">
