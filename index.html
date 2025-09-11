@@ -8,9 +8,8 @@
       name="description"
       content="근명고등학교에서 운영하는 교육/개발 지원 서버 소개 페이지"
     />
-    <meta name="theme-color" content="#2563eb" />
+    <meta name="theme-color" content="#179e9e" />
 
-    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://your-website-url.com/" />
     <meta property="og:title" content="근명고등학교 LABS 소개" />
@@ -18,47 +17,40 @@
       property="og:description"
       content="학생 주도 학습 · 협업 · 개발 환경을 제공하는 근명고 서버 플랫폼"
     />
-    <meta
-      property="og:image"
-      content="https://static.mmv.kr/e2800000007527f26e0/2i1bmFD17EzXsMEa7YVzyhnPNJUZbocVwDbbxE_ji437vaY4liSoUdPXS86duvV.webp"
-    />
+    <meta property="og:image" content="/logo.png" />
     <meta property="og:site_name" content="근명고등학교 LABS" />
 
-    <link
-      rel="preload"
-      href="https://static.mmv.kr/e2800000007527f26e0/2i1bmFD17EzXsMEa7YVzyhnPNJUZbocVwDbbxE_ji437vaY4liSoUdPXS86duvV.webp"
-      as="image"
-    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preload" href="/logo.png" as="image" />
     <link rel="stylesheet" href="styles.css" />
-    <link
-      rel="icon"
-      type="image/webp"
-      href="https://static.mmv.kr/e2800000007527f26e0/2i1bmFD17EzXsMEa7YVzyhnPNJUZbocVwDbbxE_ji437vaY4liSoUdPXS86duvV.webp"
-    />
+    <link rel="icon" type="image/webp" href="/logo.png" />
   </head>
-  <body>
-    <header class="site-header" id="top">
-      <div class="container header-inner">
-        <div class="brand">
+  <body class="bg-gray-100 text-gray-800">
+    <header class="bg-white shadow-md" id="top">
+      <div
+        class="container mx-auto px-4 py-2 flex justify-between items-center"
+      >
+        <div class="flex items-center">
           <img
-            src="https://static.mmv.kr/e2800000007527f26e0/2i1bmFD17EzXsMEa7YVzyhnPNJUZbocVwDbbxE_ji437vaY4liSoUdPXS86duvV.webp"
+            src="/logo.png"
             alt="근명고등학교 로고"
-            class="logo"
+            class="h-10 w-10 mr-3"
             decoding="async"
           />
-          <span class="brand-name">근명고등학교 LABS</span>
+          <span class="font-bold text-xl text-gray-800">근명고등학교 LABS</span>
         </div>
-        <nav class="main-nav" aria-label="주 메뉴">
-          <ul>
-            <li><a href="#about">소개</a></li>
-            <li><a href="#services">서비스</a></li>
-            <li><a href="#features">특징</a></li>
-            <li><a href="#specs">사양</a></li>
-            <li><a href="#contact">문의</a></li>
-          </ul>
+        <nav class="hidden md:flex space-x-4" aria-label="주 메뉴">
+          <a href="#about" class="text-gray-600 hover:text-teal-500">소개</a>
+          <a href="#services" class="text-gray-600 hover:text-teal-500"
+            >서비스</a
+          >
+          <a href="#features" class="text-gray-600 hover:text-teal-500">특징</a>
+          <a href="#specs" class="text-gray-600 hover:text-teal-500">사양</a>
+          <a href="#contact" class="text-gray-600 hover:text-teal-500">문의</a>
         </nav>
         <button
-          class="menu-toggle"
+          class="md:hidden menu-toggle"
           aria-expanded="false"
           aria-label="메뉴 열기"
         >
@@ -67,40 +59,66 @@
       </div>
     </header>
 
-    <section class="hero fade-in" aria-labelledby="hero-title">
-      <div class="container hero-content">
-        <div class="hero-text">
-          <h1 id="hero-title">
-            학생이 주도하는<br />협업 · 개발 · 학습<br />인프라
-          </h1>
-          <p class="lead">
-            근명고등학교 LABS는 배움과 실습이 자연스럽게 연결되는 안전하고 신뢰할 수
-            있는 서버 환경을 제공합니다.
-          </p>
-          <div class="hero-actions">
-            <a class="btn primary" href="#services">바로 살펴보기</a>
-            <a class="btn ghost" href="#contact">참여 / 문의</a>
+    <section class="relative text-white fade-in" aria-labelledby="hero-title">
+      <div class="absolute inset-0 bg-teal-600" aria-hidden="true"></div>
+      <div class="container mx-auto px-4 py-20 lg:py-32 relative z-10">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div class="hero-text">
+            <h1
+              id="hero-title"
+              class="text-4xl md:text-5xl font-extrabold leading-tight mb-4"
+            >
+              학생이 주도하는<br />협업 · 개발 · 학습<br />인프라
+            </h1>
+            <p class="text-lg md:text-xl text-teal-100 mb-8">
+              근명고등학교 LABS는 배움과 실습이 자연스럽게 연결되는 안전하고
+              신뢰할 수 있는 서버 환경을 제공합니다.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                class="bg-white text-teal-600 font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition duration-300"
+                href="#services"
+                >바로 살펴보기</a
+              >
+              <a
+                class="border border-white text-white font-bold py-3 px-6 rounded-lg hover:bg-white hover:text-teal-600 transition duration-300"
+                href="#contact"
+                >참여 / 문의</a
+              >
+            </div>
           </div>
-        </div>
-        <div class="hero-visual" aria-hidden="true">
-          <div class="glass-card">
-            <h3>실시간 상태</h3>
-            <ul class="status-list">
-              <li><span>가용성</span><strong>99.9%</strong></li>
-              <li><span>서비스</span><strong>정상</strong></li>
-              <li><span>백업</span><strong>오늘 02:10 완료</strong></li>
-            </ul>
-            <div class="tiny-note">표시는 예시 데이터입니다.</div>
+          <div class="hidden lg:block" aria-hidden="true">
+            <div
+              class="bg-white bg-opacity-20 backdrop-blur-lg rounded-xl p-6 shadow-lg"
+            >
+              <h3 class="text-xl font-bold mb-4 text-white">실시간 상태</h3>
+              <ul class="space-y-3">
+                <li class="flex justify-between items-center">
+                  <span>가용성</span
+                  ><strong class="font-bold text-green-300">99.9%</strong>
+                </li>
+                <li class="flex justify-between items-center">
+                  <span>서비스</span
+                  ><strong class="font-bold text-green-300">정상</strong>
+                </li>
+                <li class="flex justify-between items-center">
+                  <span>백업</span
+                  ><strong class="font-bold">오늘 02:10 완료</strong>
+                </li>
+              </ul>
+              <div class="text-xs text-teal-100 mt-4">
+                표시는 예시 데이터입니다.
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <div class="hero-bg" aria-hidden="true"></div>
     </section>
 
-    <section id="about" class="section fade-in">
-      <div class="container narrow">
-        <h2>서버 소개</h2>
-        <p>
+    <section id="about" class="py-16 lg:py-24 fade-in">
+      <div class="container mx-auto px-4 max-w-3xl text-center">
+        <h2 class="text-3xl font-bold mb-4">서버 소개</h2>
+        <p class="text-lg text-gray-600">
           근명고등학교 LABS는 개발 실습, 프로젝트 협업, 디지털 자료 관리,
           모니터링 학습 등 다양한 교육 활동을 지원하기 위해 구축되었습니다. 학생
           중심 운영을 지향하며, 체계적인 접근 제어와 자동화된 백업으로 안정적인
@@ -109,93 +127,133 @@
       </div>
     </section>
 
-    <section id="services" class="section alt fade-in">
-      <div class="container">
-        <h2>제공 서비스</h2>
-        <div class="grid cards">
-          <article class="card">
-            <h3>소스 코드 저장소</h3>
-            <p>
+    <section id="services" class="bg-white py-16 lg:py-24 fade-in">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">제공 서비스</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <article class="bg-gray-50 p-6 rounded-lg shadow-sm">
+            <h3 class="text-xl font-bold mb-2">소스 코드 저장소</h3>
+            <p class="text-gray-600">
               GitLab 기반의 사설 저장소로 팀 프로젝트 관리 및 CI 파이프라인 실습
               가능.
             </p>
           </article>
-          <article class="card">
-            <h3>학습 플랫폼</h3>
-            <p>Moodle를 활용한 과제 제출, 토론, 온라인 퀴즈 제공.</p>
+          <article class="bg-gray-50 p-6 rounded-lg shadow-sm">
+            <h3 class="text-xl font-bold mb-2">학습 플랫폼</h3>
+            <p class="text-gray-600">
+              Moodle를 활용한 과제 제출, 토론, 온라인 퀴즈 제공.
+            </p>
           </article>
-          <article class="card">
-            <h3>파일 협업</h3>
-            <p>Nextcloud로 문서 · 이미지 · 연구 자료 안전한 공유.</p>
+          <article class="bg-gray-50 p-6 rounded-lg shadow-sm">
+            <h3 class="text-xl font-bold mb-2">파일 협업</h3>
+            <p class="text-gray-600">
+              Nextcloud로 문서 · 이미지 · 연구 자료 안전한 공유.
+            </p>
           </article>
-          <article class="card">
-            <h3>모니터링 대시보드</h3>
-            <p>Grafana & Prometheus로 서버 상태 및 리소스 시각화.</p>
+          <article class="bg-gray-50 p-6 rounded-lg shadow-sm">
+            <h3 class="text-xl font-bold mb-2">모니터링 대시보드</h3>
+            <p class="text-gray-600">
+              Grafana & Prometheus로 서버 상태 및 리소스 시각화.
+            </p>
           </article>
-          <article class="card">
-            <h3>자동화 / CI</h3>
-            <p>Jenkins / GitLab CI를 통한 테스트 · 빌드 자동화 학습.</p>
+          <article class="bg-gray-50 p-6 rounded-lg shadow-sm">
+            <h3 class="text-xl font-bold mb-2">자동화 / CI</h3>
+            <p class="text-gray-600">
+              Jenkins / GitLab CI를 통한 테스트 · 빌드 자동화 학습.
+            </p>
           </article>
-          <article class="card">
-            <h3>컨테이너 실습</h3>
-            <p>Docker / Podman 환경에서 서비스 배포 및 운영 경험.</p>
+          <article class="bg-gray-50 p-6 rounded-lg shadow-sm">
+            <h3 class="text-xl font-bold mb-2">컨테이너 실습</h3>
+            <p class="text-gray-600">
+              Docker / Podman 환경에서 서비스 배포 및 운영 경험.
+            </p>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="features" class="section fade-in">
-      <div class="container">
-        <h2>주요 특징</h2>
-        <ul class="feature-list">
-          <li>
-            <strong>안정성:</strong> RAID 스토리지 + 정기 백업으로 데이터 보호
-          </li>
-          <li><strong>보안:</strong> 인증·권한 분리, HTTPS, 접근 로그 감시</li>
-          <li><strong>확장성:</strong> 컨테이너 기반 서비스 확장 구조</li>
-          <li><strong>교육용 설계:</strong> 실제 DevOps 흐름 체험 가능</li>
-          <li>
-            <strong>모니터링:</strong> 실시간 리소스/서비스 상태 학습 자료화
-          </li>
-          <li><strong>커뮤니티:</strong> IT 동아리 중심 운영·기여 프로세스</li>
-        </ul>
+    <section id="features" class="py-16 lg:py-24 fade-in">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">주요 특징</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
+          <div class="p-6">
+            <strong class="text-xl font-bold text-teal-600 block mb-2"
+              >안정성</strong
+            >
+            <p class="text-gray-600">
+              RAID 스토리지 + 정기 백업으로 데이터 보호
+            </p>
+          </div>
+          <div class="p-6">
+            <strong class="text-xl font-bold text-teal-600 block mb-2"
+              >보안</strong
+            >
+            <p class="text-gray-600">인증·권한 분리, HTTPS, 접근 로그 감시</p>
+          </div>
+          <div class="p-6">
+            <strong class="text-xl font-bold text-teal-600 block mb-2"
+              >확장성</strong
+            >
+            <p class="text-gray-600">컨테이너 기반 서비스 확장 구조</p>
+          </div>
+          <div class="p-6">
+            <strong class="text-xl font-bold text-teal-600 block mb-2"
+              >교육용 설계</strong
+            >
+            <p class="text-gray-600">실제 DevOps 흐름 체험 가능</p>
+          </div>
+          <div class="p-6">
+            <strong class="text-xl font-bold text-teal-600 block mb-2"
+              >모니터링</strong
+            >
+            <p class="text-gray-600">실시간 리소스/서비스 상태 학습 자료화</p>
+          </div>
+          <div class="p-6">
+            <strong class="text-xl font-bold text-teal-600 block mb-2"
+              >커뮤니티</strong
+            >
+            <p class="text-gray-600">IT 동아리 중심 운영·기여 프로세스</p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="specs" class="section alt fade-in">
-      <div class="container">
-        <h2>하드웨어 / 인프라 사양</h2>
-        <div class="spec-grid">
-          <div class="spec-block">
-            <h3>서버 하드웨어</h3>
-            <ul>
+    <section id="specs" class="bg-white py-16 lg:py-24 fade-in">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">
+          하드웨어 / 인프라 사양
+        </h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="bg-gray-50 p-6 rounded-lg">
+            <h3 class="text-xl font-bold mb-4">서버 하드웨어</h3>
+            <ul class="space-y-2 text-gray-600">
               <li>CPU: AMD Ryzen 7 (8C/16T)</li>
               <li>RAM: 32GB DDR4</li>
               <li>Storage: NVMe 1TB + HDD 4TB (RAID1)</li>
               <li>NIC: 2.5GbE</li>
             </ul>
           </div>
-          <div class="spec-block">
-            <h3>소프트웨어 스택</h3>
-            <ul>
+          <div class="bg-gray-50 p-6 rounded-lg">
+            <h3 class="text-xl font-bold mb-4">소프트웨어 스택</h3>
+            <ul class="space-y-2 text-gray-600">
               <li>OS: Ubuntu Server 22.04 LTS</li>
               <li>Container: Docker / Compose</li>
               <li>DB: PostgreSQL / MariaDB</li>
               <li>Reverse Proxy: Nginx</li>
             </ul>
           </div>
-          <div class="spec-block">
-            <h3>운영 / 관리</h3>
-            <ul>
+          <div class="bg-gray-50 p-6 rounded-lg">
+            <h3 class="text-xl font-bold mb-4">운영 / 관리</h3>
+            <ul class="space-y-2 text-gray-600">
               <li>백업: 증분 + 주간 전체</li>
               <li>모니터링: Prometheus + Grafana</li>
               <li>CI: GitLab Runner / Jenkins</li>
               <li>이슈 추적: GitLab Issues</li>
             </ul>
           </div>
-          <div class="spec-block">
-            <h3>보안</h3>
-            <ul>
+          <div class="bg-gray-50 p-6 rounded-lg">
+            <h3 class="text-xl font-bold mb-4">보안</h3>
+            <ul class="space-y-2 text-gray-600">
               <li>방화벽: UFW 정책 제한</li>
               <li>접근: SSH 키 + MFA(순차 도입)</li>
               <li>HTTPS: 자동 인증서 갱신</li>
@@ -203,39 +261,54 @@
             </ul>
           </div>
         </div>
-        <p class="tiny-note">* 실제 사양은 시점에 따라 조정될 수 있습니다.</p>
+        <p class="text-center text-sm text-gray-500 mt-8">
+          * 실제 사양은 시점에 따라 조정될 수 있습니다.
+        </p>
       </div>
     </section>
 
-    <section id="contact" class="section fade-in">
-      <div class="container narrow">
-        <h2>참여 및 문의</h2>
-        <p>
+    <section id="contact" class="py-16 lg:py-24 fade-in">
+      <div class="container mx-auto px-4 max-w-3xl text-center">
+        <h2 class="text-3xl font-bold mb-4">참여 및 문의</h2>
+        <p class="text-lg text-gray-600 mb-8">
           IT 관련 프로젝트에 참여하고 싶거나 서버 사용이 필요한 경우 아래
           연락처로 문의하세요.
         </p>
-        <div class="contact-box">
-          <p><strong>운영 동아리:</strong> 근명고 IT / 개발 동아리</p>
-          <p>
-            <strong>이메일:</strong>
-            <a href="mailto:itclub@example.com">itclub@example.com</a>
+        <div
+          class="bg-white shadow-md rounded-lg p-8 text-left max-w-lg mx-auto"
+        >
+          <p class="mb-4">
+            <strong>운영 동아리:</strong> 근명고 IT / 개발 동아리
           </p>
-          <p><strong>위치:</strong> 본관 3층 프로젝트실</p>
-          <p class="small">불필요한 개인정보는 제출하지 마세요.</p>
+          <p class="mb-4">
+            <strong>이메일:</strong>
+            <a
+              href="mailto:itclub@example.com"
+              class="text-teal-600 hover:underline"
+              >itclub@example.com</a
+            >
+          </p>
+          <p class="mb-4"><strong>위치:</strong> 본관 3층 프로젝트실</p>
+          <p class="text-sm text-gray-500">
+            불필요한 개인정보는 제출하지 마세요.
+          </p>
         </div>
-        <a href="#top" class="btn to-top" aria-label="맨 위로 이동"
+        <a
+          href="#top"
+          class="mt-12 inline-block text-gray-600 hover:text-teal-600"
+          aria-label="맨 위로 이동"
           >맨 위로 ↑</a
         >
       </div>
     </section>
 
-    <footer class="site-footer">
-      <div class="container footer-inner">
+    <footer class="bg-gray-800 text-white py-8">
+      <div class="container mx-auto px-4 text-center">
         <p>
           &copy; <span id="year"></span> 근명고등학교. 학생 교육 목적 내부
           인프라 소개 페이지.
         </p>
-        <p class="footer-note">
+        <p class="text-sm text-gray-400 mt-2">
           본 페이지는 예시이며 일부 데이터는 샘플입니다.
         </p>
       </div>
